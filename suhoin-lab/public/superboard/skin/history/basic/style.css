@@ -1,0 +1,93 @@
+  /.   @charset "utf-8";
+/**************************************************
+
+	SUPERBOARD :: HISTORY SKIN :: basic
+
+**************************************************/
+/* 연혁 */
+.his-wrap {margin:80px 100px;}
+.his-wrap h1{text-align:center;font-weight:normal;font-family:mn,noto;font-size:36px;color:#222222}
+.his-wrap h2{margin-top:10px;text-align:center;font-weight:normal;font-size:18px;color:#666666}
+.his-wrap .info{position:relative;}
+
+.his-wrap .info>div{margin:45px 0;}
+.his-wrap .info>div:after{content:'';display:block;clear:both;}
+.his-wrap dl{position:relative;width:50%;min-height:120px;}
+.his-wrap dl.last{padding-bottom:0px;}
+.his-wrap .info>div:last-child dl:after  {position:absolute; content:''; width:1px; height:calc(100% - 15px); background:#fff; top:15px; left:0; z-index:-1;}
+.his-wrap .info>div:last-child {margin-bottom:0;}
+.his-wrap dt{position:absolute;top:0px;font-weight:800; font-size:38px;line-height:1em;color:#7726ff;}
+.his-wrap dd{position:relative;margin:10px 0 20px;}
+.his-wrap dd strong{position:absolute;top:0px;width:135px;font-family:mn,noto;font-size:19px;color:#222;}
+.his-wrap dd .txt{position:relative;top:5px; box-sizing:border-box; }
+.his-wrap dd .txt:after {position:absolute; content:''; width:4px; height:4px; top:8px;  background:#7726ff;}
+.his-wrap dd em{display:block;margin-bottom:5px;font-style:normal;font-weight:bold;font-size:17px;color:#222222;}
+.his-wrap dd pre{position:relative;top:-2px;font-size:16px;line-height:24px;color:#666666;}
+.his-wrap .img{width:50%;margin-top:75px;box-sizing:border-box;}
+.his-wrap .img img{max-width:100%;}
+
+.his-wrap .odd dl{float:right}
+.his-wrap .odd dt{left:-150px;}
+.his-wrap .odd dd{padding-left:60px; position:relative; }
+.his-wrap .odd dd strong{left:40px;}
+.his-wrap .odd .img{float:left;padding-right:45px;text-align:right;}
+.his-wrap .even dl{float:left;}
+.his-wrap .even dt{right:-150px;}
+.his-wrap .even dd{padding-right:60px;text-align:right;}
+.his-wrap .even dd strong{right:40px;}
+.his-wrap .even .img{float:right;padding-left:45px;}
+.his-wrap dl.last:after{display:none;}
+
+.his-wrap .info:before{content:'';position:absolute;top:15px;left:50%;width:1px;height:calc(100% - 15px);background:#ddd; z-index:-2;}
+.his-wrap dl dt + dd:before{opacity:1}
+.his-wrap dl dt + dd:after{opacity:1}
+.his-wrap dd:before{content:''; position:absolute;opacity:0; top:4px;width:22px;height:22px;background:#fff; box-sizing:border-box; border:1px solid #7726ff; border-radius: 50%;}
+.his-wrap dd:after{content:'';position:absolute;opacity:0;top:11px;width:8px;height:8px;background:#7726ff;border-radius: 50%;z-index:1;}
+.his-wrap .odd dd:before {left:-11px;}
+.his-wrap .odd dd:after {left:-4px;}
+.his-wrap .odd dd .txt {padding-left:15px; box-sizing:border-box;}
+.his-wrap .odd dd .txt:after {left:0;}
+.his-wrap .even dd:before {right:-11px;}
+.his-wrap .even dd:after {right:-4px;}
+.his-wrap .even dd .txt {padding-right:15px; box-sizing:border-box;}
+.his-wrap .even dd .txt:after {right:0;}
+
+
+.his-wrap .tab{margin-bottom: 40px;text-align: center;}
+.his-wrap .tab li{display: inline-block;margin-right: 5px;}
+.his-wrap .tab li a{display: block;line-height: 45px;height: 45px;text-align: center;width: 120px;font-size: 16px;background: #f7f7f7;border: 1px solid #f7f7f7;}
+.his-wrap .tab li.active a{background: #fff;border: 1px solid #333;}
+
+
+
+
+@media screen and (max-width: 1280px){
+
+	.his-wrap .info:before{left:70px}
+	.his-wrap .info{padding-left:70px;}
+	.his-wrap dl{width:auto ;min-height:auto;}
+	.his-wrap dt{ font-size:20px;}
+	.his-wrap dd{margin-bottom:10px;}
+	.his-wrap dd pre{font-size:14px;line-height:21px;}
+	.his-wrap .img{width:auto;margin-top:10px;}
+	.his-wrap .odd dl{float:inherit;}
+	.his-wrap .odd dt{left:-70px}
+	.his-wrap .odd dd{padding-left:50px;}
+	.his-wrap .odd .img{float:inherit;padding-right:0px;padding-left:20px;text-align:left;}
+	.his-wrap .even dl{float:inherit;}
+	.his-wrap .even dt{right:auto;left:-70px;}
+	.his-wrap .even dd{padding-right:0px;padding-left:50px;text-align:left;}
+	.his-wrap .even dd strong{right:auto;left:40px;}
+	.his-wrap .even .img{float:inherit;padding-left:20px;}
+
+	.his-wrap .even dl:after{right:auto;left:0}
+	.his-wrap .even dd strong:before{right:auto;left:-46px;}
+	.his-wrap .even dd strong:after{right:auto;left:-43px;}
+	
+
+
+	.his-wrap .even dd:before {left:-11px; right:auto;}
+	.his-wrap .even dd:after {left:-4px; right:auto;}
+		.his-wrap .even dd .txt {padding-right:0; padding-left:15px;}
+	.his-wrap .even dd .txt:after {left:0; right:auto;}
+}

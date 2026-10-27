@@ -1,0 +1,8 @@
+/* 학습용 추가 스타일: 업로드 로고/지도/팝업을 대체한다 */
+#header .logo a { font-size: 28px; font-weight: 700; color: #1a3a8f; line-height: 62px; text-decoration: none; }
+.map-placeholder { display: flex; align-items: center; justify-content: center; height: 430px; background: #e6e3f0; color: #8a84a8; }
+.sp-pop { position: fixed; top: 120px; left: 50%; transform: translateX(-50%); width: min(420px, 90vw); padding: 24px; background: #fff; border: 1px solid #ccc; box-shadow: 0 8px 24px rgba(0,0,0,.2); z-index: 10000; }
+.sp-pop { overflow: visible; }
+.sp-pop .btns { position: static; display: flex; margin: 16px 0 0; padding: 0; list-style: none; }
+.sp-pop .btns li { flex: 1; }
+.sp-pop[hidden] { display: none; }

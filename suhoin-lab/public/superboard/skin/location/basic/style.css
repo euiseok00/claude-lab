@@ -1,0 +1,57 @@
+@charset "utf-8";
+/**************************************************
+
+	SUPERBOARD :: LOCATION SKIN :: basic
+
+**************************************************/
+.loc-tbl-tit{display: block;margin-bottom: 20px;font-size: 25px;color: #333;font-weight: 300;}
+
+.loc-box{zoom: 1;}
+.loc-box:after{display: block;content: '';clear: both;}
+.loc-box > *{position: relative;float: left;min-height: 430px;}
+.loc-box dt{width: 910px;}
+.loc-box dd{width: 340px;margin-left: 30px;background: #f9f9f9;border-top: 2px solid #7726ff;box-sizing: border-box;padding: 40px 35px;}
+.loc-box dd h4{display: block; font-size: 26px;font-weight: 300;color: #333333;letter-spacing: -1px;}
+.loc-box dd .loc-tbl > li{position: relative;margin:20px 0 0;padding-left: 100px;}
+.loc-box dd .loc-tbl > li > strong{position: absolute;top: 0;left: 0;font-size: 16px;color: #333333;font-weight: 600;letter-spacing: -1px; line-height:26px;}
+.loc-box dd .loc-tbl > li > strong i{width: 25px;text-align: center;font-size: 21px;color: #7726ff;display: inline-block;margin-right: 5px;vertical-align: middle;margin-top: -4px;}
+.loc-box dd .loc-tbl > li > p{display: block;font-size: 15px;line-height: 26px;color: #505050;}
+.loc-box dd .gomap{position: relative;margin-top: 60px;display: block;line-height: 45px; background: -webkit-linear-gradient(right, #007cfd 0, #7726ff 50%, #b51fff 100%); background: -o-linear-gradient(right, #007cfd 0, #7726ff 50%, #b51fff 100%); background: -moz-linear-gradient(right, #007cfd 0, #7726ff 50%, #b51fff 100%);  background: linear-gradient(to right, #007cfd 0, #7726ff 50%, #b51fff 100%);font-size: 15px;color: #fff;text-decoration: none;padding: 0 30px;}
+.loc-box dd .gomap:after{content: '+';display: block;position: absolute;top: 0;right: 30px;line-height: 45px;font-size: 19px;color: #fff;}
+
+.loc-info{margin-top: 70px;border-top: 2px solid #afafaf;}
+.loc-info > li{position: relative;display: block;padding: 40px 20px 40px 155px;box-sizing: border-box;border-bottom: 1px solid #ddd;min-height: 170px;}
+.loc-info > li > img{position: absolute;top: 40px;left: 20px;}
+.loc-info > li h5{font-size: 20px;color: #333333;letter-spacing: -1px;font-weight: 300;}
+.loc-info > li h5 em{font-style: normal;font-size: 18px;}
+.loc-info > li ul.detail{margin-top: 20px;}
+.loc-info > li ul.detail li{position: relative;font-size: 15px;line-height: 18px;color: #666666;padding: 3px 0 3px 15px;letter-spacing: -1px;}
+.loc-info > li ul.detail li:before{content: '';display: block;position: absolute;top: 10px;left: 4px;width: 2px;height: 2px;background: #999;border-radius: 50%;}
+
+@media screen and (max-width: 1200px) {
+
+    .loc-tbl-tit{margin-bottom: 15px;font-size: 16px;}
+
+    .loc-box > *{float: none;min-height: 0;}
+    .loc-box dt{width: auto;}
+    .loc-box dd{width: auto;margin-left: 0;padding: 20px 15px;margin-top: 5px;}
+    .loc-box dd h4{margin-bottom: 10px;font-size: 16px;}
+    .loc-box dd .loc-tbl > li{margin: 5px 0;padding-left: 70px;}
+    .loc-box dd .loc-tbl > li > strong{font-size: 13px;}
+    .loc-box dd .loc-tbl > li > strong i{width: 20px;font-size: 18px;margin-top: -2px;}
+    .loc-box dd .loc-tbl > li > p{font-size: 13px;line-height: 18px;}
+    .loc-box dd .gomap{margin-top: 20px;line-height: 35px;font-size: 13px;padding: 0 25px;}
+    .loc-box dd .gomap:after{right: 25px;line-height: 35px;font-size: 14px;}
+
+    .loc-info{margin-top: 20px;}
+    .loc-info > li{padding: 20px 10px 20px 65px;min-height: 70px;}
+    .loc-info > li > img{top: 20px;left: 10px;width: 40px;height: auto;}
+    .loc-info > li h5{font-size: 16px;}
+    .loc-info > li h5 em{font-size: 13px;}
+    .loc-info > li ul.detail{margin-top: 15px;}
+    .loc-info > li ul.detail li{font-size: 13px;padding: 3px 0 3px 10px;}
+    .loc-info > li ul.detail li:before{top: 12px;}
+
+    #map{height: 200px !important;}
+
+}
