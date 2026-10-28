@@ -1,0 +1,151 @@
+<div class="calculation">
+    <h3>장애인고용부담금 <b>절감금액</b></h3>
+    <div class="body">
+        <div class="left">
+            <div class="account_body">
+                <div class="account_1"><!-- 사업체 구분선택 / 100% 박스 -->
+                    <strong>1. 사업체 구분 선택</strong>
+                    <div class="radio_box">
+                        <label>
+                            <input type="radio" name="company_type" class="company-type" id="" value="normal" checked>
+                            <em class="line_1">민간사업주</em>
+                        </label>
+                        <label>
+                            <input type="radio"  name="company_type" class="company-type" id="" value="public">
+                            <em class="line_1">공공기관/지방공기업</em>
+                        </label>
+                        <label>
+                            <input type="radio" name="company_type" class="company-type" id="" value="nation">
+                            <em class="line_2">국가/자치단체 </br> (공무원 아닌 근로자)</em>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="account_2"> <!-- 전체 근로자수 66% 박스 -->
+                    <strong>2. 전체 근로자수(상시근로자수)</strong>
+                    <input type="text" id="totalWorkers" value="" class="onlyNumber">
+                    <div class="click_box">
+                        <button type = "button" id="c1" value="1000" class="calc" >+ 1000명</button>
+                        <button type = "button" id="c2" value="100" class="calc">+ 100명</button>
+                        <button type = "button" id="c3" value="10" class="calc">+ 10명</button>
+                        <button type = "button" id="c4" value="1" class="calc">+ 1명</button>
+                        <button type = "button" id="" value="" class="reset">초기화</button>
+                    </div>
+                </div>
+
+				 <!-- 법인세 제거 2026-03-18 -->
+                <div class="account_3" style="display:none;"> <!-- 법인세 33% 박스 -->
+                    <strong>3. 법인세(년) 부가세 비율<span>(%)</span></strong>
+                    <div class="count">
+                        <form>
+                            <input type="button" value="-" class="minus">
+                            <input type="text" name="amount" value="19" class="number onlyNumber" id="taxRate">
+                            <input type="button" value="+" class="plus">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="account_4"> <!-- 현재 고용된 장애인 근로자수 33% 박스 -->
+                    <strong>3. 현재 고용된 장애인 근로자수<span>(명)</span></strong>
+                    <div class="count">
+                        <form>
+                            <input type="button" value="-" class="minus">
+                            <input type="text" name="amount" id="lightDisabled" value="" class="number onlyNumber">
+                            <input type="button" value="+" class="plus">
+                        </form>
+                        <p>경증장애인</p>
+                    </div>
+                    <div class="count">
+                        <form>
+                            <input type="button" value="-" class="minus">
+                            <input type="text" name="amount" id="heavyDisabledOver60" value="" class="number onlyNumber">
+                            <input type="button" value="+" class="plus">
+                        </form>
+                        <p>중증장애인(60시간 이상) </p>
+                    </div>
+                    <div class="count">
+                        <form>
+                            <input type="button" value="-" class="minus">
+                            <input type="text" name="amount" id="heavyDisabledUnder60" value="" class="number onlyNumber">
+                            <input type="button" value="+" class="plus">
+                        </form>
+                        <p>중증장애인(60시간 미만) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="account_btn">
+                <a href="" class="btn_1">부담금 조회</a>
+                <a href="" class="btn_2">재입력</a>
+            </div>
+        </div>
+        <div class="right">
+            <h4>예상납부금액</h4>
+            <div class="pay_list">
+                <p>
+                    <span>의무 고용인원</span>
+                    <b id="dumyAmount">0</b>
+                    <em>명</em>
+                </p>
+                <p>
+                    <span>미달 고용인원</span>
+                    <b id="underAmount">0</b>
+                    <em>명</em>
+                </p>
+                <p>
+                    <span>장애인 고용 부담금(매월)</span>
+                    <b id="monthlyPay">0</b>
+                    <em>원</em>
+                </p>
+				<p>
+                    <span>연간(2026년)</span>
+                    <b id="yearlyPay26">0</b>
+                    <em>원</em>
+                </p>
+                <p>
+                    <span>연간(2025년)</span>
+                    <b id="yearlyPay25">0</b>
+                    <em>원</em>
+                </p>
+                <p>
+                    <span>연간(2024년)</span>
+                    <b id="yearlyPay24">0</b>
+                    <em>원</em>
+                </p>
+                <p>
+                    <span>연간(2023년)</span>
+                    <b id="yearlyPay23">0</b>
+                    <em>원</em>
+                </p>
+                <!--				<p>-->
+                <!--					<span>연간(2022년)</span>-->
+                <!--					<b id="yearlyPay22">0</b>-->
+                <!--					<em>원</em>-->
+                <!--				</p>-->
+                <!--<p>
+                    <span>연간(2021년)</span>
+                    <b id="yearlyPay21">0</b>
+                    <em>원</em>
+                </p>-->
+                <!-- 				<p> -->
+                <!-- 					<span>연간(2020년)</span> -->
+                <!-- 					<b id="yearlyPay20">0</b> -->
+                <!-- 					<em>원</em> -->
+                <!-- 				</p> -->
+                <!-- 법인세 제거 2026-03-18 
+				<p>
+                    <span>법인세(년)</span>
+                    <b id="taxAmount">0</b>
+                    <em>원</em>
+                </p>-->
+            </div>
+            <div class="total">
+                <p>
+                    총 납부금액(부담금) 연간
+                    <strong id="totalAmount">0 <b>원</b></strong>
+                </p>
+            </div>
+            <h5>위 계산은 참고용으로 실제 납부금액과 차이가 있을 수 있습니다. </h5>
+        </div>
+    </div>
+</div>
+

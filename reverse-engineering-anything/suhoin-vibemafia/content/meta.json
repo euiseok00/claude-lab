@@ -1,0 +1,182 @@
+{
+ "board_work": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "게시판",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "게시판",
+   "공지사항"
+  ]
+ },
+ "business_effect": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "사업소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "사업소개",
+   "장애예술인 고용효과"
+  ]
+ },
+ "business_overview": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "사업소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "사업소개",
+   "수호인 서비스 소개"
+  ]
+ },
+ "business_program_1": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "사업소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "사업소개",
+   "수호인 차별화 서비스1"
+  ]
+ },
+ "business_program_2": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "사업소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "사업소개",
+   "수호인 차별화 서비스2"
+  ]
+ },
+ "company_greetings": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "CEO인사말"
+  ]
+ },
+ "company_history": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "연혁"
+  ]
+ },
+ "company_location": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "오시는 길"
+  ]
+ },
+ "company_organization": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "조직도"
+  ]
+ },
+ "company_overview": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "기업소개"
+  ]
+ },
+ "company_service": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "고객서비스 현장"
+  ]
+ },
+ "company_vision": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "회사소개",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "회사소개",
+   "MISSION & VISION"
+  ]
+ },
+ "customer_inquiry": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "고객센터",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "고객센터",
+   "온라인문의"
+  ]
+ },
+ "doc_antiemail": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "약관 및 정책",
+  "em": "",
+  "nav": [
+   "약관 및 정책",
+   "이메일무단수집거부"
+  ]
+ },
+ "doc_policy": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "약관 및 정책",
+  "em": "",
+  "nav": [
+   "약관 및 정책",
+   "이용약관"
+  ]
+ },
+ "doc_private": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "약관 및 정책",
+  "em": "",
+  "nav": [
+   "약관 및 정책",
+   "개인정보처리방침"
+  ]
+ },
+ "employment_overview": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "입사지원",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "입사지원",
+   "입사지원"
+  ]
+ },
+ "employment_write2": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "입사지원",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "입사지원",
+   "입사지원"
+  ]
+ },
+ "support_account": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "장애예술인 일자리 지원",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "장애예술인 일자리 지원",
+   "고용부담금 계산기"
+  ]
+ },
+ "support_system": {
+  "bg": "/images/layout/sub_visual_1.png",
+  "h2": "장애예술인 일자리 지원",
+  "em": "장애예술인 재택근무 플랫폼, 수호인입니다.",
+  "nav": [
+   "장애예술인 일자리 지원",
+   "장애인고용의무제도"
+  ]
+ }
+}

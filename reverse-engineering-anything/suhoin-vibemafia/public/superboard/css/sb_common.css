@@ -1,0 +1,68 @@
+@charset "utf-8";
+/**************************************************
+
+	SUPERBOARD :: RESET
+
+**************************************************/
+/*web fonts*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face{
+    font-family:empty;
+    src:url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAQ0AAoAAAAAA+wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAJ4AAACeXQ48j09TLzIAAAGUAAAAYAAAAGAIIgbWY21hcAAAAfQAAABEAAAARAAyAGlnYXNwAAACOAAAAAgAAAAIAAAAEGhlYWQAAAJAAAAANgAAADb9mzB5aGhlYQAAAngAAAAkAAAAJAHiAeVobXR4AAACnAAAABAAAAAQAAAAAG1heHAAAAKsAAAABgAAAAYABFAAbmFtZQAAArQAAAFdAAABXVqZXRlwb3N0AAAEFAAAACAAAAAgAAMAAAEABAQAAQEBDHNwYWNlLWVtcHR5AAECAAEAOvgcAvgbA/gYBB4KABlT/4uLHgoAGVP/i4sMB4tr+JT4dAUdAAAAfA8dAAAAgREdAAAACR0AAACVEgAFAQEMFxkbHnNwYWNlLWVtcHR5c3BhY2UtZW1wdHl1MHUxdTIwAAACAYkAAgAEAQEEBwoN/JQO/JQO/JQO/JQO+JQU+JQViwwKAAAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAAIAHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADAAAAAIAAgAAgAAAAEAIP/9//8AAAAAACD//f//AAH/4wADAAEAAAAAAAAAAAABAAH//wAPAAEAAAABAAAAeR2GXw889QALAgAAAAAAzz54vgAAAADPPni+AAAAAAAAAAAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABQAAAEAAAAAAAOAK4AAQAAAAAAAQAWAAAAAQAAAAAAAgAOAGMAAQAAAAAAAwAWACwAAQAAAAAABAAWAHEAAQAAAAAABQAWABYAAQAAAAAABgALAEIAAQAAAAAACgAoAIcAAwABBAkAAQAWAAAAAwABBAkAAgAOAGMAAwABBAkAAwAWACwAAwABBAkABAAWAHEAAwABBAkABQAWABYAAwABBAkABgAWAE0AAwABBAkACgAoAIcAcwBwAGEAYwBlAC0AZQBtAHAAdAB5AFYAZQByAHMAaQBvAG4AIAAxAC4AMABzAHAAYQBjAGUALQBlAG0AcAB0AHlzcGFjZS1lbXB0eQBzAHAAYQBjAGUALQBlAG0AcAB0AHkAUgBlAGcAdQBsAGEAcgBzAHAAYQBjAGUALQBlAG0AcAB0AHkARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');
+}
+/*reset browsers*/
+#sb-wrap *{ -webkit-text-size-adjust:none; -webkit-border-radius:0; }
+#sb-wrap input[type=button],
+#sb-wrap input[type=submit]{ -webkit-appearance:none; }
+
+/*reset elements*/
+#sb-wrap form,#sb-wrap dl,#sb-wrap dd{ margin:0; padding:0; }
+#sb-wrap label{ cursor:pointer; }
+#sb-wrap article,#sb-wrap aside,#sb-wrap details,#sb-wrap figcaption,#sb-wrap figure,#sb-wrap footer,header,#sb-wrap #sb-wrap hgroup,#sb-wrap menu,#sb-wrap nav,#sb-wrap section,#sb-wrap dd,#sb-wrap hgroup{ display:block; }
+#sb-wrap img{ border:none; vertical-align:middle; }
+#sb-wrap fieldset{ margin:0; padding:0; border:none; }
+#sb-wrap legend{ margin:0; padding:0; }
+#sb-wrap p{ margin:0; padding:0; }
+#sb-wrap h1,#sb-wrap h2,#sb-wrap h3,#sb-wrap h4,#sb-wrap h5,#sb-wrap h6{ margin:0; padding:0; }
+#sb-wrap table{ border-collapse:collapse; border-spacing:0; }
+
+/*Inputs*/
+#sb-wrap input{ cursor:pointer; }
+#sb-wrap input[type=checkbox],
+#sb-wrap input[type=radio]{ border:none; vertical-align:middle; }
+
+#sb-wrap input[type=search]{ border:none;display:inline-block;vertical-align:middle; height:50px; }
+#sb-wrap input[type=text],
+#sb-wrap input[type=password],
+#sb-wrap input[type=search],
+#sb-wrap input[type=email],
+#sb-wrap input[type=url],
+#sb-wrap input[type=number]{display:inline-block;vertical-align:middle;outline: none;height: 35px;line-height: 35px;padding: 0 15px;background: #ffffff;border: 1px solid #dadada;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+#sb-wrap select{height: 35px;line-height: 35px;padding: 0 0 0 10px;background: #ffffff;border: 1px solid #dadada;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+#sb-wrap textarea{width: 100%;height: 300px;font-size: 14px;line-height: 18px;padding: 15px;background: #ffffff;border: 1px solid #ddd;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+
+#sb-wrap ::-webkit-input-placeholder{ color:#98908b; }
+#sb-wrap :-moz-placeholder{ color:#98908b; }
+#sb-wrap ::-moz-placeholder{ color:#98908b; }
+#sb-wrap :-ms-input-placeholder{ color:#98908b; }
+
+/*reset links*/
+#sb-wrap A:link{ text-decoration:none; color:#666666; }
+#sb-wrap A:visited { text-decoration:none; color:#666666; }
+#sb-wrap A:active { text-decoration:none; color:#666666; }
+#sb-wrap A:hover{ text-decoration:underline; color:#000000; }
+
+@media screen and (max-width: 750px) {
+
+	#sb-wrap input[type=search]{ border:none; height:50px; }
+	#sb-wrap input[type=text],
+	#sb-wrap input[type=password],
+	#sb-wrap input[type=search],
+	#sb-wrap input[type=email],
+	#sb-wrap input[type=url],
+	#sb-wrap input[type=number]{font-size: 12px;padding: 0 5px;}
+	#sb-wrap select{padding: 0 0 0 5px;font-size: 12px;}
+	#sb-wrap textarea{padding: 10px;font-size: 12px;line-height: 16px;}
+	#wm_email_select{margin-top:5px;}
+
+}

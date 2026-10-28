@@ -1,0 +1,26 @@
+/* 학습용 추가 스타일: 업로드 로고/지도/팝업을 대체한다 */
+#header .logo a { font-size: 28px; font-weight: 700; color: #1a3a8f; line-height: 62px; text-decoration: none; }
+.map-placeholder { display: flex; align-items: center; justify-content: center; height: 430px; background: #e6e3f0; color: #8a84a8; }
+.sp-pop { position: fixed; top: 120px; left: 50%; transform: translateX(-50%); width: min(420px, 90vw); padding: 24px; background: #fff; border: 1px solid #ccc; box-shadow: 0 8px 24px rgba(0,0,0,.2); z-index: 10000; }
+.sp-pop { overflow: visible; }
+.sp-pop .btns { position: static; display: flex; margin: 16px 0 0; padding: 0; list-style: none; }
+.sp-pop .btns li { flex: 1; }
+.sp-pop[hidden] { display: none; }
+
+/* vibemafia 인터랙션 이식: 스크롤 등장, 호버 전환, 포커스 링, 폼 메시지 */
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 2px solid #7726ff; outline-offset: 2px; }
+a, button, .btn_1, .btn_2 { transition: color .15s cubic-bezier(.4, 0, .2, 1), background-color .15s cubic-bezier(.4, 0, .2, 1), opacity .15s cubic-bezier(.4, 0, .2, 1); }
+#sb-gallery > li, .slide_1 .item { transition: box-shadow .2s cubic-bezier(.4, 0, .2, 1), transform .2s cubic-bezier(.4, 0, .2, 1); }
+#sb-gallery > li:hover { transform: translateY(-3px); box-shadow: 0 8px 24px -12px rgb(0 0 0 / .3); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: #7726ff; box-shadow: 0 0 0 3px rgb(119 38 255 / .25); transition: border-color .2s, box-shadow .2s; }
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s cubic-bezier(.4, 0, .2, 1), transform .5s cubic-bezier(.4, 0, .2, 1); }
+.js .reveal.in { opacity: 1; transform: none; }
+.form-msg { min-height: 1.4em; margin-top: 12px; font-size: 14px; color: #6b6b6b; }
+.form-msg.error { color: #d93025; }
+.form-msg.ok { color: #1a3a8f; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  #sb-gallery > li:hover { transform: none; }
+}

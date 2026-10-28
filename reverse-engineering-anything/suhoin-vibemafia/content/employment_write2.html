@@ -1,0 +1,906 @@
+<!-- 기본 style 적용-->
+<!-- 기본 style 적용-->
+<!-- skin style 적용-->
+<!-- skin style 적용-->
+
+	<!-- 온라인 문의 online basic skin -->
+
+	<div id="sb-wrap">
+
+		<form name="writeform" action="/api/application" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+			<input type="hidden" name="selfpage" value="/_subpage/kor/employment/write2.php"/>
+			<input type="hidden" name="wm_kind" value="입사지원 신청 (NEW)"/>
+
+			<div id="sb-form">
+
+				<!-- s:개인정보 -->
+				<fieldset>
+					<legend>개인정보</legend>
+					<table class="form_tbl">
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">성함</th>
+								<td>
+									<input type="text" name="wm_name" id="wm_name" class="inp" aria-label="성함">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<td>
+									<input type="tel" name="wm_tel1" id="wm_tel1" class="inp w33" maxlength="4" aria-label="연락처 앞자리"> -
+									<input type="tel" name="wm_tel2" id="wm_tel2" class="inp w33" maxlength="4" aria-label="연락처 가운데 자리"> -
+									<input type="tel" name="wm_tel3" id="wm_tel3" class="inp w33" maxlength="4" aria-label="연락처 끝자리">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">비상연락처(관계)</th>
+								<td>
+									<select name="wm_1" id="wm_1" class="inp" aria-label="비상연락처 관계">
+										<option value="">관계 선택</option>
+										<option value="본인">본인</option>
+										<option value="부">부</option>
+										<option value="모">모</option>
+										<option value="형제">형제</option>
+										<option value="자매">자매</option>
+										<option value="친인척">친인척</option>
+										<option value="기타">기타</option>
+									</select>
+									<input type="tel" name="wm_2" id="wm_2" class="inp" aria-label="비상연락처">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">성별</th>
+								<td>
+									<label><input type="radio" name="wm_3" id="" value="남자"> 남자</label>
+									<label><input type="radio" name="wm_3" id="" value="여자"> 여자</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일</th>
+								<td>
+									<input type="text" class="inp" name="wm_email1" id="wm_email1" aria-label="이메일 아이디">
+									<span>@</span>
+									<input type="text" class="inp" name="wm_email2" id="wm_email2" aria-label="이메일 도메인">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">주소</th>
+								<td>
+									<div class="addr_box">
+										<input type="text" name="wm_zipcode" id="wm_zipcode" class="w200" placeholder="우편번호", readonly>
+										<input type="button" value="주소검색" class="sb-btn type3" onclick="win_zip('writeform','wm_zipcode', 'wm_addr1', 'wm_addr2');"><br>
+										<input type="text" class="inp w100" name="wm_addr1" id="wm_addr1" maxlength="100" value="" readonly>
+										<input type="text" class="inp w100" name="wm_addr2" id="wm_addr2" maxlength="100" value="">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- e:개인정보 -->
+
+				<!-- s:지원구분 -->
+				<fieldset>
+					<legend>지원구분</legend>
+					<table class="form_tbl">
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">구분</th>
+								<td>
+									<label><input type="radio" name="wm_4" id="" value="신입"> 신입</label>
+									<label><input type="radio" name="wm_4" id="" value="경력"> 경력</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">희망근무시간</th>
+								<td>
+									<label><input type="radio" name="wm_5" id="" value="모두가능"> 모두가능</label>
+									<label><input type="radio" name="wm_5" id="" value="오전만 가능"> 오전만 가능</label>
+									<label><input type="radio" name="wm_5" id="" value="오후만 가능"> 오후만 가능</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기초생활수급자</th>
+								<td>
+									<label><input type="radio" name="wm_6" id="" value="대상"> 대상</label>
+									<label><input type="radio" name="wm_6" id="" value="비대상"> 비대상</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">보훈대상자</th>
+								<td>
+									<label><input type="radio" name="wm_7" id="" value="대상"> 대상</label>
+									<label><input type="radio" name="wm_7" id="" value="비대상"> 비대상</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">국가유공자상이등급</th>
+								<td>
+									<select name="wm_8" id="wm_8" class="inp" aria-label="국가유공자상이등급">
+										<option value="">급수 선택</option>
+										<option value="1">1급</option>
+										<option value="2">2급</option>
+										<option value="3">3급</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- e:지원구분 -->
+
+				<!-- s:지원분야 -->
+				<fieldset>
+					<legend>지원분야</legend>
+					<table class="form_tbl">
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">재택근무</th>
+								<td>
+									<label><input type="radio" name="wm_9" id="" value="희망"> 희망</label>
+									<label><input type="radio" name="wm_9" id="" value="비희망"> 비희망</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">지원직무<br>(중복선택가능)</th>
+								<td>
+									<div class="">
+										<span>예술(미술)</span>
+										<select name="wm_10[]" id="wm_10" class="inp">
+											<option value="">선택</option>
+											<option value="그림">그림</option>
+											<option value="회화">회화</option>
+											<option value="서양화">서양화</option>
+											<option value="동양화">동양화</option>
+											<option value="수채화">수채화</option>
+											<option value="유화">유화</option>
+											<option value="정물화">정물화</option>
+											<option value="캘리그라피">캘리그라피</option>
+											<option value="공예">공예</option>
+											<option value="도예">도예</option>
+											<option value="도자기">도자기</option>
+											<option value="조각">조각</option>
+											<option value="웹디자인">웹디자인</option>
+											<option value="그래픽디자인">그래픽디자인</option>
+											<option value="포스터제작">포스터제작</option>
+											<option value="일러스트">일러스트</option>
+											<option value="서예">서예</option>
+											<option value="영상편집">영상편집</option>
+											<option value="디자인">디자인</option>
+											<option value="캐드 디자인">캐드 디자인</option>
+											<option value="재봉">재봉</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="mt10">
+										<span>예술(음악)</span>
+										<select name="wm_11[]" id="wm_11" class="inp">
+											<option value="">선택</option>
+											<option value="합창">합창</option>
+											<option value="성악">성악</option>
+											<option value="영상">영상</option>
+											<option value="클래식">클래식</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="mt10">
+										<span>예술(무용)</span>
+										<select name="wm_12[]" id="wm_12" class="inp">
+											<option value="">선택</option>
+											<option value="한국무용">한국무용</option>
+											<option value="현대무용">현대무용</option>
+											<option value="민속무용">민속무용</option>
+											<option value="실용무용(K-POP댄스, 힙합)">실용무용(K-POP댄스, 힙합)</option>
+											<option value="발레">발레</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="mt10">
+										<span>예술(악기)</span>
+										<select name="wm_13[]" id="wm_13" class="inp">
+											<option value="">선택</option>
+											<option value="국악기">국악기</option>
+											<option value="사물놀이">사물놀이</option>
+											<option value="핸드벨">핸드벨</option>
+											<option value="피아노">피아노</option>
+											<option value="기타(악기)">기타(악기)</option>
+											<option value="첼로">첼로</option>
+											<option value="바이올린">바이올린</option>
+											<option value="하모니카">하모니카</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- e:지원분야 -->
+
+				<!-- s:장애정보 -->
+				<fieldset>
+					<legend>장애정보</legend>
+					<table class="form_tbl">
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">장애유형</th>
+								<td>
+									<div class="top_box">
+										<span>주된장애</span>
+										<select name="wm_14" id="wm_14" class="inp">
+											<option value="">선택</option>
+											<option value="지체장애">지체장애</option>
+											<option value="지적장애">지적장애</option>
+											<option value="발달장애">발달장애</option>
+											<option value="자폐성장애">자폐성장애</option>
+											<option value="시각장애">시각장애</option>
+											<option value="청각장애">청각장애</option>
+											<option value="신장장애">신장장애</option>
+											<option value="정신장애">정신장애</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="btm_box mt10">
+										<span>차상위장애</span>
+										<select name="wm_15" id="wm_15" class="inp">
+											<option value="">선택</option>
+											<option value="지체장애">지체장애</option>
+											<option value="지적장애">지적장애</option>
+											<option value="발달장애">발달장애</option>
+											<option value="자폐성장애">자폐성장애</option>
+											<option value="시각장애">시각장애</option>
+											<option value="청각장애">청각장애</option>
+											<option value="신장장애">신장장애</option>
+											<option value="정신장애">정신장애</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">중증장애인 해당 여부</th>
+								<td>
+									<label><input type="radio" name="wm_16" id="" value="예"> 예</label>
+									<label><input type="radio" name="wm_16" id="" value="아니오"> 아니오</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">장애인복지법에 따른 최초등록일자</th>
+								<td>
+									<div class="picker_box">
+										<input type="text" name="wm_17" id="wm_17" class="inp" aria-label="장애인복지법에 따른 최초등록일자" placeholder="날짜 선택" aria-expanded="false" readonly>
+										<div class="picker_wrap">
+											<ul aria-label="연도">
+																								<li><button type="button">1920</button></li>
+																								<li><button type="button">1921</button></li>
+																								<li><button type="button">1922</button></li>
+																								<li><button type="button">1923</button></li>
+																								<li><button type="button">1924</button></li>
+																								<li><button type="button">1925</button></li>
+																								<li><button type="button">1926</button></li>
+																								<li><button type="button">1927</button></li>
+																								<li><button type="button">1928</button></li>
+																								<li><button type="button">1929</button></li>
+																								<li><button type="button">1930</button></li>
+																								<li><button type="button">1931</button></li>
+																								<li><button type="button">1932</button></li>
+																								<li><button type="button">1933</button></li>
+																								<li><button type="button">1934</button></li>
+																								<li><button type="button">1935</button></li>
+																								<li><button type="button">1936</button></li>
+																								<li><button type="button">1937</button></li>
+																								<li><button type="button">1938</button></li>
+																								<li><button type="button">1939</button></li>
+																								<li><button type="button">1940</button></li>
+																								<li><button type="button">1941</button></li>
+																								<li><button type="button">1942</button></li>
+																								<li><button type="button">1943</button></li>
+																								<li><button type="button">1944</button></li>
+																								<li><button type="button">1945</button></li>
+																								<li><button type="button">1946</button></li>
+																								<li><button type="button">1947</button></li>
+																								<li><button type="button">1948</button></li>
+																								<li><button type="button">1949</button></li>
+																								<li><button type="button">1950</button></li>
+																								<li><button type="button">1951</button></li>
+																								<li><button type="button">1952</button></li>
+																								<li><button type="button">1953</button></li>
+																								<li><button type="button">1954</button></li>
+																								<li><button type="button">1955</button></li>
+																								<li><button type="button">1956</button></li>
+																								<li><button type="button">1957</button></li>
+																								<li><button type="button">1958</button></li>
+																								<li><button type="button">1959</button></li>
+																								<li><button type="button">1960</button></li>
+																								<li><button type="button">1961</button></li>
+																								<li><button type="button">1962</button></li>
+																								<li><button type="button">1963</button></li>
+																								<li><button type="button">1964</button></li>
+																								<li><button type="button">1965</button></li>
+																								<li><button type="button">1966</button></li>
+																								<li><button type="button">1967</button></li>
+																								<li><button type="button">1968</button></li>
+																								<li><button type="button">1969</button></li>
+																								<li><button type="button">1970</button></li>
+																								<li><button type="button">1971</button></li>
+																								<li><button type="button">1972</button></li>
+																								<li><button type="button">1973</button></li>
+																								<li><button type="button">1974</button></li>
+																								<li><button type="button">1975</button></li>
+																								<li><button type="button">1976</button></li>
+																								<li><button type="button">1977</button></li>
+																								<li><button type="button">1978</button></li>
+																								<li><button type="button">1979</button></li>
+																								<li><button type="button">1980</button></li>
+																								<li><button type="button">1981</button></li>
+																								<li><button type="button">1982</button></li>
+																								<li><button type="button">1983</button></li>
+																								<li><button type="button">1984</button></li>
+																								<li><button type="button">1985</button></li>
+																								<li><button type="button">1986</button></li>
+																								<li><button type="button">1987</button></li>
+																								<li><button type="button">1988</button></li>
+																								<li><button type="button">1989</button></li>
+																								<li><button type="button">1990</button></li>
+																								<li><button type="button">1991</button></li>
+																								<li><button type="button">1992</button></li>
+																								<li><button type="button">1993</button></li>
+																								<li><button type="button">1994</button></li>
+																								<li><button type="button">1995</button></li>
+																								<li><button type="button">1996</button></li>
+																								<li><button type="button">1997</button></li>
+																								<li><button type="button">1998</button></li>
+																								<li><button type="button">1999</button></li>
+																								<li><button type="button">2000</button></li>
+																								<li><button type="button">2001</button></li>
+																								<li><button type="button">2002</button></li>
+																								<li><button type="button">2003</button></li>
+																								<li><button type="button">2004</button></li>
+																								<li><button type="button">2005</button></li>
+																								<li><button type="button">2006</button></li>
+																								<li><button type="button">2007</button></li>
+																								<li><button type="button">2008</button></li>
+																								<li><button type="button">2009</button></li>
+																								<li><button type="button">2010</button></li>
+																								<li><button type="button">2011</button></li>
+																								<li><button type="button">2012</button></li>
+																								<li><button type="button">2013</button></li>
+																								<li><button type="button">2014</button></li>
+																								<li><button type="button">2015</button></li>
+																								<li><button type="button">2016</button></li>
+																								<li><button type="button">2017</button></li>
+																								<li><button type="button">2018</button></li>
+																								<li><button type="button">2019</button></li>
+																								<li><button type="button">2020</button></li>
+																								<li><button type="button">2021</button></li>
+																								<li><button type="button">2022</button></li>
+																								<li><button type="button">2023</button></li>
+																								<li><button type="button">2024</button></li>
+																								<li><button type="button">2025</button></li>
+																								<li><button type="button">2026</button></li>
+																							</ul>
+											<ul aria-label="월">
+																								<li><button type="button">1</button></li>
+																								<li><button type="button">2</button></li>
+																								<li><button type="button">3</button></li>
+																								<li><button type="button">4</button></li>
+																								<li><button type="button">5</button></li>
+																								<li><button type="button">6</button></li>
+																								<li><button type="button">7</button></li>
+																								<li><button type="button">8</button></li>
+																								<li><button type="button">9</button></li>
+																								<li><button type="button">10</button></li>
+																								<li><button type="button">11</button></li>
+																								<li><button type="button">12</button></li>
+																							</ul>
+											<ul aria-label="일">
+																								<li><button type="button">1</button></li>
+																								<li><button type="button">2</button></li>
+																								<li><button type="button">3</button></li>
+																								<li><button type="button">4</button></li>
+																								<li><button type="button">5</button></li>
+																								<li><button type="button">6</button></li>
+																								<li><button type="button">7</button></li>
+																								<li><button type="button">8</button></li>
+																								<li><button type="button">9</button></li>
+																								<li><button type="button">10</button></li>
+																								<li><button type="button">11</button></li>
+																								<li><button type="button">12</button></li>
+																								<li><button type="button">13</button></li>
+																								<li><button type="button">14</button></li>
+																								<li><button type="button">15</button></li>
+																								<li><button type="button">16</button></li>
+																								<li><button type="button">17</button></li>
+																								<li><button type="button">18</button></li>
+																								<li><button type="button">19</button></li>
+																								<li><button type="button">20</button></li>
+																								<li><button type="button">21</button></li>
+																								<li><button type="button">22</button></li>
+																								<li><button type="button">23</button></li>
+																								<li><button type="button">24</button></li>
+																								<li><button type="button">25</button></li>
+																								<li><button type="button">26</button></li>
+																								<li><button type="button">27</button></li>
+																								<li><button type="button">28</button></li>
+																								<li><button type="button">29</button></li>
+																								<li><button type="button">30</button></li>
+																								<li><button type="button">31</button></li>
+																							</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- e:장애정보 -->
+
+				<!-- s:경력 -->
+				<fieldset>
+					<legend>경력</legend>
+					<table class="form_tbl">
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">회사명</th>
+								<td>
+									<input type="text" name="wm_18" id="wm_18" class="inp" aria-label="회사명">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">재직기간</th>
+								<td>
+									<div class="period_box">
+										<label name="" id="">
+											<span>입사일</span>
+											<div class="picker_box">
+												<input type="text" name="wm_19" id="wm_19" class="inp" aria-label="입사일" placeholder="날짜선택" aria-expanded="false" readonly>
+												<div class="picker_wrap">
+													<ul aria-label="연도">
+																												<li><button type="button">1920</button></li>
+																												<li><button type="button">1921</button></li>
+																												<li><button type="button">1922</button></li>
+																												<li><button type="button">1923</button></li>
+																												<li><button type="button">1924</button></li>
+																												<li><button type="button">1925</button></li>
+																												<li><button type="button">1926</button></li>
+																												<li><button type="button">1927</button></li>
+																												<li><button type="button">1928</button></li>
+																												<li><button type="button">1929</button></li>
+																												<li><button type="button">1930</button></li>
+																												<li><button type="button">1931</button></li>
+																												<li><button type="button">1932</button></li>
+																												<li><button type="button">1933</button></li>
+																												<li><button type="button">1934</button></li>
+																												<li><button type="button">1935</button></li>
+																												<li><button type="button">1936</button></li>
+																												<li><button type="button">1937</button></li>
+																												<li><button type="button">1938</button></li>
+																												<li><button type="button">1939</button></li>
+																												<li><button type="button">1940</button></li>
+																												<li><button type="button">1941</button></li>
+																												<li><button type="button">1942</button></li>
+																												<li><button type="button">1943</button></li>
+																												<li><button type="button">1944</button></li>
+																												<li><button type="button">1945</button></li>
+																												<li><button type="button">1946</button></li>
+																												<li><button type="button">1947</button></li>
+																												<li><button type="button">1948</button></li>
+																												<li><button type="button">1949</button></li>
+																												<li><button type="button">1950</button></li>
+																												<li><button type="button">1951</button></li>
+																												<li><button type="button">1952</button></li>
+																												<li><button type="button">1953</button></li>
+																												<li><button type="button">1954</button></li>
+																												<li><button type="button">1955</button></li>
+																												<li><button type="button">1956</button></li>
+																												<li><button type="button">1957</button></li>
+																												<li><button type="button">1958</button></li>
+																												<li><button type="button">1959</button></li>
+																												<li><button type="button">1960</button></li>
+																												<li><button type="button">1961</button></li>
+																												<li><button type="button">1962</button></li>
+																												<li><button type="button">1963</button></li>
+																												<li><button type="button">1964</button></li>
+																												<li><button type="button">1965</button></li>
+																												<li><button type="button">1966</button></li>
+																												<li><button type="button">1967</button></li>
+																												<li><button type="button">1968</button></li>
+																												<li><button type="button">1969</button></li>
+																												<li><button type="button">1970</button></li>
+																												<li><button type="button">1971</button></li>
+																												<li><button type="button">1972</button></li>
+																												<li><button type="button">1973</button></li>
+																												<li><button type="button">1974</button></li>
+																												<li><button type="button">1975</button></li>
+																												<li><button type="button">1976</button></li>
+																												<li><button type="button">1977</button></li>
+																												<li><button type="button">1978</button></li>
+																												<li><button type="button">1979</button></li>
+																												<li><button type="button">1980</button></li>
+																												<li><button type="button">1981</button></li>
+																												<li><button type="button">1982</button></li>
+																												<li><button type="button">1983</button></li>
+																												<li><button type="button">1984</button></li>
+																												<li><button type="button">1985</button></li>
+																												<li><button type="button">1986</button></li>
+																												<li><button type="button">1987</button></li>
+																												<li><button type="button">1988</button></li>
+																												<li><button type="button">1989</button></li>
+																												<li><button type="button">1990</button></li>
+																												<li><button type="button">1991</button></li>
+																												<li><button type="button">1992</button></li>
+																												<li><button type="button">1993</button></li>
+																												<li><button type="button">1994</button></li>
+																												<li><button type="button">1995</button></li>
+																												<li><button type="button">1996</button></li>
+																												<li><button type="button">1997</button></li>
+																												<li><button type="button">1998</button></li>
+																												<li><button type="button">1999</button></li>
+																												<li><button type="button">2000</button></li>
+																												<li><button type="button">2001</button></li>
+																												<li><button type="button">2002</button></li>
+																												<li><button type="button">2003</button></li>
+																												<li><button type="button">2004</button></li>
+																												<li><button type="button">2005</button></li>
+																												<li><button type="button">2006</button></li>
+																												<li><button type="button">2007</button></li>
+																												<li><button type="button">2008</button></li>
+																												<li><button type="button">2009</button></li>
+																												<li><button type="button">2010</button></li>
+																												<li><button type="button">2011</button></li>
+																												<li><button type="button">2012</button></li>
+																												<li><button type="button">2013</button></li>
+																												<li><button type="button">2014</button></li>
+																												<li><button type="button">2015</button></li>
+																												<li><button type="button">2016</button></li>
+																												<li><button type="button">2017</button></li>
+																												<li><button type="button">2018</button></li>
+																												<li><button type="button">2019</button></li>
+																												<li><button type="button">2020</button></li>
+																												<li><button type="button">2021</button></li>
+																												<li><button type="button">2022</button></li>
+																												<li><button type="button">2023</button></li>
+																												<li><button type="button">2024</button></li>
+																												<li><button type="button">2025</button></li>
+																												<li><button type="button">2026</button></li>
+																											</ul>
+													<ul aria-label="월">
+																												<li><button type="button">1</button></li>
+																												<li><button type="button">2</button></li>
+																												<li><button type="button">3</button></li>
+																												<li><button type="button">4</button></li>
+																												<li><button type="button">5</button></li>
+																												<li><button type="button">6</button></li>
+																												<li><button type="button">7</button></li>
+																												<li><button type="button">8</button></li>
+																												<li><button type="button">9</button></li>
+																												<li><button type="button">10</button></li>
+																												<li><button type="button">11</button></li>
+																												<li><button type="button">12</button></li>
+																											</ul>
+													<ul aria-label="일">
+																												<li><button type="button">1</button></li>
+																												<li><button type="button">2</button></li>
+																												<li><button type="button">3</button></li>
+																												<li><button type="button">4</button></li>
+																												<li><button type="button">5</button></li>
+																												<li><button type="button">6</button></li>
+																												<li><button type="button">7</button></li>
+																												<li><button type="button">8</button></li>
+																												<li><button type="button">9</button></li>
+																												<li><button type="button">10</button></li>
+																												<li><button type="button">11</button></li>
+																												<li><button type="button">12</button></li>
+																												<li><button type="button">13</button></li>
+																												<li><button type="button">14</button></li>
+																												<li><button type="button">15</button></li>
+																												<li><button type="button">16</button></li>
+																												<li><button type="button">17</button></li>
+																												<li><button type="button">18</button></li>
+																												<li><button type="button">19</button></li>
+																												<li><button type="button">20</button></li>
+																												<li><button type="button">21</button></li>
+																												<li><button type="button">22</button></li>
+																												<li><button type="button">23</button></li>
+																												<li><button type="button">24</button></li>
+																												<li><button type="button">25</button></li>
+																												<li><button type="button">26</button></li>
+																												<li><button type="button">27</button></li>
+																												<li><button type="button">28</button></li>
+																												<li><button type="button">29</button></li>
+																												<li><button type="button">30</button></li>
+																												<li><button type="button">31</button></li>
+																											</ul>
+												</div>
+											</div>
+										</label>
+										<span>~</span>
+										<label>
+											<span>퇴사일</span>
+											<div class="picker_box">
+												<input type="text" name="wm_20" id="wm_20" class="inp" aria-label="퇴사일" placeholder="날짜선택" aria-expanded="false" readonly>
+												<div class="picker_wrap">
+													<ul aria-label="연도">
+																												<li><button type="button">1920</button></li>
+																												<li><button type="button">1921</button></li>
+																												<li><button type="button">1922</button></li>
+																												<li><button type="button">1923</button></li>
+																												<li><button type="button">1924</button></li>
+																												<li><button type="button">1925</button></li>
+																												<li><button type="button">1926</button></li>
+																												<li><button type="button">1927</button></li>
+																												<li><button type="button">1928</button></li>
+																												<li><button type="button">1929</button></li>
+																												<li><button type="button">1930</button></li>
+																												<li><button type="button">1931</button></li>
+																												<li><button type="button">1932</button></li>
+																												<li><button type="button">1933</button></li>
+																												<li><button type="button">1934</button></li>
+																												<li><button type="button">1935</button></li>
+																												<li><button type="button">1936</button></li>
+																												<li><button type="button">1937</button></li>
+																												<li><button type="button">1938</button></li>
+																												<li><button type="button">1939</button></li>
+																												<li><button type="button">1940</button></li>
+																												<li><button type="button">1941</button></li>
+																												<li><button type="button">1942</button></li>
+																												<li><button type="button">1943</button></li>
+																												<li><button type="button">1944</button></li>
+																												<li><button type="button">1945</button></li>
+																												<li><button type="button">1946</button></li>
+																												<li><button type="button">1947</button></li>
+																												<li><button type="button">1948</button></li>
+																												<li><button type="button">1949</button></li>
+																												<li><button type="button">1950</button></li>
+																												<li><button type="button">1951</button></li>
+																												<li><button type="button">1952</button></li>
+																												<li><button type="button">1953</button></li>
+																												<li><button type="button">1954</button></li>
+																												<li><button type="button">1955</button></li>
+																												<li><button type="button">1956</button></li>
+																												<li><button type="button">1957</button></li>
+																												<li><button type="button">1958</button></li>
+																												<li><button type="button">1959</button></li>
+																												<li><button type="button">1960</button></li>
+																												<li><button type="button">1961</button></li>
+																												<li><button type="button">1962</button></li>
+																												<li><button type="button">1963</button></li>
+																												<li><button type="button">1964</button></li>
+																												<li><button type="button">1965</button></li>
+																												<li><button type="button">1966</button></li>
+																												<li><button type="button">1967</button></li>
+																												<li><button type="button">1968</button></li>
+																												<li><button type="button">1969</button></li>
+																												<li><button type="button">1970</button></li>
+																												<li><button type="button">1971</button></li>
+																												<li><button type="button">1972</button></li>
+																												<li><button type="button">1973</button></li>
+																												<li><button type="button">1974</button></li>
+																												<li><button type="button">1975</button></li>
+																												<li><button type="button">1976</button></li>
+																												<li><button type="button">1977</button></li>
+																												<li><button type="button">1978</button></li>
+																												<li><button type="button">1979</button></li>
+																												<li><button type="button">1980</button></li>
+																												<li><button type="button">1981</button></li>
+																												<li><button type="button">1982</button></li>
+																												<li><button type="button">1983</button></li>
+																												<li><button type="button">1984</button></li>
+																												<li><button type="button">1985</button></li>
+																												<li><button type="button">1986</button></li>
+																												<li><button type="button">1987</button></li>
+																												<li><button type="button">1988</button></li>
+																												<li><button type="button">1989</button></li>
+																												<li><button type="button">1990</button></li>
+																												<li><button type="button">1991</button></li>
+																												<li><button type="button">1992</button></li>
+																												<li><button type="button">1993</button></li>
+																												<li><button type="button">1994</button></li>
+																												<li><button type="button">1995</button></li>
+																												<li><button type="button">1996</button></li>
+																												<li><button type="button">1997</button></li>
+																												<li><button type="button">1998</button></li>
+																												<li><button type="button">1999</button></li>
+																												<li><button type="button">2000</button></li>
+																												<li><button type="button">2001</button></li>
+																												<li><button type="button">2002</button></li>
+																												<li><button type="button">2003</button></li>
+																												<li><button type="button">2004</button></li>
+																												<li><button type="button">2005</button></li>
+																												<li><button type="button">2006</button></li>
+																												<li><button type="button">2007</button></li>
+																												<li><button type="button">2008</button></li>
+																												<li><button type="button">2009</button></li>
+																												<li><button type="button">2010</button></li>
+																												<li><button type="button">2011</button></li>
+																												<li><button type="button">2012</button></li>
+																												<li><button type="button">2013</button></li>
+																												<li><button type="button">2014</button></li>
+																												<li><button type="button">2015</button></li>
+																												<li><button type="button">2016</button></li>
+																												<li><button type="button">2017</button></li>
+																												<li><button type="button">2018</button></li>
+																												<li><button type="button">2019</button></li>
+																												<li><button type="button">2020</button></li>
+																												<li><button type="button">2021</button></li>
+																												<li><button type="button">2022</button></li>
+																												<li><button type="button">2023</button></li>
+																												<li><button type="button">2024</button></li>
+																												<li><button type="button">2025</button></li>
+																												<li><button type="button">2026</button></li>
+																											</ul>
+													<ul aria-label="월">
+																												<li><button type="button">1</button></li>
+																												<li><button type="button">2</button></li>
+																												<li><button type="button">3</button></li>
+																												<li><button type="button">4</button></li>
+																												<li><button type="button">5</button></li>
+																												<li><button type="button">6</button></li>
+																												<li><button type="button">7</button></li>
+																												<li><button type="button">8</button></li>
+																												<li><button type="button">9</button></li>
+																												<li><button type="button">10</button></li>
+																												<li><button type="button">11</button></li>
+																												<li><button type="button">12</button></li>
+																											</ul>
+													<ul aria-label="일">
+																												<li><button type="button">1</button></li>
+																												<li><button type="button">2</button></li>
+																												<li><button type="button">3</button></li>
+																												<li><button type="button">4</button></li>
+																												<li><button type="button">5</button></li>
+																												<li><button type="button">6</button></li>
+																												<li><button type="button">7</button></li>
+																												<li><button type="button">8</button></li>
+																												<li><button type="button">9</button></li>
+																												<li><button type="button">10</button></li>
+																												<li><button type="button">11</button></li>
+																												<li><button type="button">12</button></li>
+																												<li><button type="button">13</button></li>
+																												<li><button type="button">14</button></li>
+																												<li><button type="button">15</button></li>
+																												<li><button type="button">16</button></li>
+																												<li><button type="button">17</button></li>
+																												<li><button type="button">18</button></li>
+																												<li><button type="button">19</button></li>
+																												<li><button type="button">20</button></li>
+																												<li><button type="button">21</button></li>
+																												<li><button type="button">22</button></li>
+																												<li><button type="button">23</button></li>
+																												<li><button type="button">24</button></li>
+																												<li><button type="button">25</button></li>
+																												<li><button type="button">26</button></li>
+																												<li><button type="button">27</button></li>
+																												<li><button type="button">28</button></li>
+																												<li><button type="button">29</button></li>
+																												<li><button type="button">30</button></li>
+																												<li><button type="button">31</button></li>
+																											</ul>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="radio_list mt10">
+										<label><input type="radio" name="wm_21" id="" value="퇴사"> 퇴사</label>
+										<label><input type="radio" name="wm_21" id="" value="재직중"> 재직중</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">퇴사사유</th>
+								<td>
+									<select name="wm_22" id="wm_22" class="inp" aria-label="퇴사사유">
+										<option value="">선택</option>
+										<option value="개인사정">개인사정</option>
+										<option value="이직">이직</option>
+										<option value="건강">건강</option>
+										<option value="기타">기타</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">담당업무</th>
+								<td>
+									<select name="wm_23" id="wm_23" class="inp" aria-label="담당업무">
+										<option value="">선택</option>
+										<option value="예술">예술</option>
+										<option value="사무보조">사무보조</option>
+										<option value="체육">체육</option>
+										<option value="기타">기타</option>
+									</select>
+								</td>
+							</tr>
+
+														<tr>
+								<th>자동입력방지</th>
+								<td>
+									<div class='g-recaptcha' data-sitekey='6Le3eNUpAAAAAABuOiSeKgWdy_fdWFvzQ2wl32gT'></div>								</td>
+							</tr>
+						    
+						</tbody>
+					</table>
+				</fieldset>
+				<!-- e:경력 -->
+
+				<div class="danger">
+					<strong>[유의사항]</strong>
+					<p>
+						- 중복지원은 불가능합니다. </br>
+						- 작성하신 내용은 향후 채용 전형 진행에 활용되므로 올바르게 기입되었는지 잘 확인하시기 바랍니다. </br>
+						- 면접 대상과 일정은 개별 안내할 예정입니다. </br>
+						- 이력서 작성이 어려울 경우 별도의 파일로 검수 해주시기 바랍니다. (이메일 접수)
+					</p>
+				</div>
+
+				<!-- s:개인정보처리방침 -->
+				<fieldset>
+					<legend>개인정보처리방침</legend>
+					<div class="privacy"><p><span class="agr-tit1">제1조 (개인정보 수집에 대한 동의)</span><strong>수호인</strong>(이하 회사)는 이용자들이 회사의 개인정보취급방침 또는 이용약관의 내용에 대하여 &ldquo;동의&rdquo;버튼 또는 &ldquo;취소&rdquo;버튼을 클릭할 수 있는 절차를 마련하여, &ldquo;동의&rdquo;버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다. <span class="agr-tit1">제2조 (개인정보 수집항목)</span> 온라인 문의를 통한 상담을 위해 처리하는 개인정보 항목은 아래와 같습니다.<br />
+수집항목 : 성명, 이메일, 전화번호 <span class="agr-tit1">제3조 (개인정보의 이용목적)</span> 회사는 이용자의 사전 동의 없이는 이용자의 개인 정보를 공개하지 않으며, 원활한 고객상담, 각종 서비스의 제공을 위해 아래와 같이 개인정보를 수집하고 있습니다. 모든 정보는 상기 목적에 필요한 용도 이외로는 사용되지 않으며 수집 정보의 범위나 사용 목적, 용도가 변경될 시에는 반드시 사전 동의를 구할 것입니다.<br />
+<br />
+- 성명 : 제품상담에 따른 본인 확인<br />
+- 이메일, 전화번호 : 제품상담 및 이벤트 관련 고지사항 전달, 새로운 서비스 및 신상품 정보 제공(DM, SMS, 이메일 등 이용)<br />
+<br />
+이용자는 개인정보의 수집/이용에 대한 동의를 거부할 수 있습니다. 다만, 동의를 거부하는 경우 온라인 문의를 통한 상담은 불가하며 서비스 이용 및 혜택 제공에 제한을 받을 수 있습니다. <span class="agr-tit1">제4조 (개인정보의 보유 및 이용기간)</span> 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.<br />
+그리고 상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법렵의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 정보를 보관합니다.<br />
+이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.<br />
+<br />
+- 계약 또는 청약철회 등에 관한 기록 : 5년(전자상거래등에서의 소비자보호에 관한 법률)<br />
+- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래등에서의 소비자 보호에 관한 법률)<br />
+- 시용정보의 수집/처리 및 이용 등에 관한 기록 : 3년(신용정보의 이용 및 보호에 관한 법률)<br />
+- 회사는 귀중한 이용자의 개인정보를 안전하게 처리하며, 유출의 방지를 위하여 다음과 같은 방법을 통하여 개인정보를 파기합니다.<br />
+- 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br />
+- 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다
+<style type="text/css">.agr-tit1{display: block;margin: 15px 0 10px 0;font-size: 13px;color: #666;font-weight:bold;border-bottom: 1px solid #ddd;padding-bottom:13px;}
+@media screen and (max-width: 750px){
+.agr-tit1{margin: 15px 0 10px 0;font-size: 13px;padding-left: 15px;}
+.agr-tit2{margin: 20px 0;font-size: 13px;}
+.agr-tit3{margin: 20px 0;font-size: 13px;}
+}
+</style>
+</p>
+</div>
+					<label class="agree">
+						<input type="checkbox" name="agree1" id="agree1" value="Y"/> 개인정보처리방침에 동의합니다.
+					</label>
+				</fieldset>
+				<!-- e:개인정보처리방침 -->
+
+			</div>
+
+			<!-- s:foot button -->
+			<div id="sb-footer">
+				<div class="center">
+					<input type="submit" value="확인" class="sb-btn type1" id="submitBtn" />
+				</div>
+			</div>
+			<!-- e:foot button -->
+
+		</form>
+
+
+	</div>
+
+
+
+<!-- 온라인 문의 online basic skin -->

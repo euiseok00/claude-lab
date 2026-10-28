@@ -1,0 +1,51 @@
+@charset "utf-8";
+/**************************************************
+
+	SUPERBOARD :: FORM SKIN :: default
+
+**************************************************/
+#sb-form{}
+#sb-form fieldset{margin-bottom: 50px;}
+#sb-form legend{margin-bottom: 15px;font-size: 18px;color: #000000;}
+#sb-form .privacy{height: 156px;overflow-y: scroll;background: #f7f7f7;border: 1px solid #eee;padding: 5px 15px 15px 15px;font-size: 13px;line-height: 18px;color: #666;margin-bottom: 10px;}
+#sb-form .agree{display: block;text-align: right;font-size: 14px;}
+#sb-form .form_tbl .w33{width: 130px;}
+#sb-form .form_tbl .w50{width: 280px;}
+#sb-form .form_tbl .inp,
+#sb-form .form_tbl select{display:inline-block;vertical-align:middle;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:35px;line-height:35px;border:1px solid #ddd;border-radius: 3px;}
+/* #sb-form .form_tbl .inp{text-indent:10px;} */
+#sb-form .form_tbl select{padding-left:7px;}
+#sb-form .form_tbl{width: 100%;border-top: 2px solid #545c73;}
+#sb-form .form_tbl tr > *{position: relative;padding: 15px 10px;border: 1px solid #dddddd;border-width: 0 0 1px 0;font-size: 14px;line-height: 18px;text-align: center;}
+#sb-form .form_tbl tr th{background: #f7f7f7;font-weight: normal;}
+#sb-form .form_tbl tr td{text-align: left;}
+#sb-form .form_tbl textarea{width:100%;border:1px solid #ddd;border-radius: 3px;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+#sb-form .form_tbl hr { border: 0; margin: 3px 0;}
+#sb-form .form_tbl label { vertical-align: middle;}
+#sb-form .form_tbl label input[type="checkbox"] { margin: 2px 2px 5px;}
+
+@media screen and (max-width: 750px) {
+	#sb-form fieldset{margin-bottom: 20px;}
+	#sb-form legend{margin-bottom: 10px;font-size: 14px;}
+	#sb-form .form_tbl .inp{text-indent:5px;}
+	#sb-form .form_tbl select{padding-left:4px;}
+	#sb-form .privacy{height: 100px;padding: 10px;font-size: 12px;line-height: 15px;}
+	#sb-form .agree{font-size: 12px;}
+	#sb-form .form_tbl colgroup{display: none;}
+	#sb-form .form_tbl tr > *{padding: 5px 3px;font-size: 11px;line-height: 15px;}
+	#sb-form .form_tbl tr th{width: 80px;}
+	#sb-form .form_tbl select{width: 100%;}
+	#sb-form .form_tbl textarea{height: 150px;}
+	#sb-form .form_tbl .inp{width: 100%; margin: 2px 0;}
+	#sb-form .form_tbl .w50{width: 48%;}
+	#sb-form .form_tbl .w33{width: 30.5%;}
+	#wm_email_select{margin-top:6px;}
+
+
+    #sb-form .form_tbl tr > * { display: block; box-sizing: border-box;}
+    #sb-form .form_tbl tr th { width: 100%;}
+    #sb-form .form_tbl .sb-btn.type3 { width: 100%; margin-top: 5px;}
+    #sb-form .form_tbl .address .inp{width: 100%; margin: 2px 0;}
+
+    #sb-form .form_tbl label { font-size: 12px;}
+}
