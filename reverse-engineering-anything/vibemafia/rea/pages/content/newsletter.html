@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>뉴스레터 · 프롬프트 랩</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+</head>
+<body data-root="../..">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero"><div class="container">
+      <p class="eyebrow">NEWSLETTER</p>
+      <h1>뉴스레터</h1>
+      <p class="lead">매주 짧은 글로 정리해 드립니다. 글 제목은 모두 가상입니다.</p>
+      <form class="newsletter" data-form novalidate style="max-width:460px;margin-top:20px">
+        <label class="sr-only" for="nl-email">이메일</label>
+        <input id="nl-email" name="email" type="email" placeholder="you@example.com" required>
+        <button class="btn btn-primary" type="submit">구독</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div></section>
+    <section class="block"><div class="container">
+      <div class="tabs" role="group" aria-label="카테고리">
+        <button class="tab" type="button" data-cat="all" aria-pressed="true">전체</button>
+        <button class="tab" type="button" data-cat="트렌드" aria-pressed="false">트렌드</button>
+        <button class="tab" type="button" data-cat="AX" aria-pressed="false">AX</button>
+        <button class="tab" type="button" data-cat="노하우" aria-pressed="false">노하우</button>
+        <button class="tab" type="button" data-cat="라이브노트" aria-pressed="false">라이브노트</button>
+      </div>
+      <div class="article-grid">
+        <a class="article reveal" data-cat="트렌드" href="#"><div class="thumb" style="--a:#6de9a1;--b:#0b4b26"></div><h3>업무 자동화를 시작하는 가장 작은 단계</h3><span>트렌드 · 2026.10</span></a>
+        <a class="article reveal" data-cat="AX" href="#"><div class="thumb" style="--a:#93efb9;--b:#117038"></div><h3>팀에 도입할 때 먼저 정할 것 세 가지</h3><span>AX · 2026.10</span></a>
+        <a class="article reveal" data-cat="노하우" href="#"><div class="thumb" style="--a:#48e489;--b:#062513"></div><h3>프롬프트를 템플릿으로 바꾸는 방법</h3><span>노하우 · 2026.10</span></a>
+        <a class="article reveal" data-cat="라이브노트" href="#"><div class="thumb" style="--a:#c9f7dc;--b:#16954b"></div><h3>라이브 노트: 설계 점검 체크리스트</h3><span>라이브노트 · 2026.10</span></a>
+        <a class="article reveal" data-cat="트렌드" href="#"><div class="thumb" style="--a:#6de9a1;--b:#0b4b26"></div><h3>이번 달 도구 업데이트 정리</h3><span>트렌드 · 2026.09</span></a>
+        <a class="article reveal" data-cat="AX" href="#"><div class="thumb" style="--a:#93efb9;--b:#117038"></div><h3>도입 후 측정할 지표 고르기</h3><span>AX · 2026.09</span></a>
+        <a class="article reveal" data-cat="노하우" href="#"><div class="thumb" style="--a:#48e489;--b:#062513"></div><h3>긴 문서 요약을 안정적으로 받는 요령</h3><span>노하우 · 2026.09</span></a>
+        <a class="article reveal" data-cat="라이브노트" href="#"><div class="thumb" style="--a:#c9f7dc;--b:#16954b"></div><h3>라이브 노트: 오류 원인 좁히기</h3><span>라이브노트 · 2026.09</span></a>
+        <a class="article reveal" data-cat="노하우" href="#"><div class="thumb" style="--a:#6de9a1;--b:#0b4b26"></div><h3>작게 시작하는 지식 정리 습관</h3><span>노하우 · 2026.08</span></a>
+        <a class="article reveal" data-cat="AX" href="#"><div class="thumb" style="--a:#93efb9;--b:#117038"></div><h3>조직 규모별 도입 사례 비교</h3><span>AX · 2026.08</span></a>
+        <a class="article reveal" data-cat="라이브노트" href="#"><div class="thumb" style="--a:#48e489;--b:#062513"></div><h3>라이브 노트: 로드맵 짜기</h3><span>라이브노트 · 2026.08</span></a>
+        <a class="article reveal" data-cat="트렌드" href="#"><div class="thumb" style="--a:#c9f7dc;--b:#16954b"></div><h3>다음 분기 주목할 흐름</h3><span>트렌드 · 2026.08</span></a>
+      </div>
+    </div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

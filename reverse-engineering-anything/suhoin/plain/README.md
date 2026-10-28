@@ -1,4 +1,4 @@
-# 수호인 학습용 사이트 (suhoin-lab-b)
+# 수호인 학습용 사이트 (suhoin/plain)
 
 Node 내장 모듈만 사용. 의존성 설치 없음. 프런트는 바닐라 JS/CSS (번들 없음, `public/` 약 12KB).
 

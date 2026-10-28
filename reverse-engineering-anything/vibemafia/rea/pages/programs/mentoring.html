@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1:1 멘토링 · 프롬프트 랩</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+</head>
+<body data-root="../..">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero"><div class="container narrow-lg">
+      <p class="eyebrow">1:1 멘토링</p>
+      <h1>속도보다 먼저,<br>방향을 점검합니다</h1>
+      <p class="lead">시간과 노력을 쏟기 전에 내 계획이 맞는 길인지 짚어 보는 상담입니다. (예제용 가상 프로그램)</p>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2>이런 분께 추천합니다</h2>
+      <ul class="check-list">
+        <li>만들고 싶은 것은 있는데 어디서 시작할지 모르겠어요.</li>
+        <li>혼자 하다 막혀서 한 번 점검받고 싶어요.</li>
+        <li>팀에 도입할 방식을 정하고 싶어요.</li>
+      </ul>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2>상담은 두 단계로 진행됩니다</h2>
+      <ol class="steps">
+        <li class="reveal"><div><b>문제 정의 설문</b><span>상황과 목표를 미리 적어 주시면 시간을 아낄 수 있어요.</span></div></li>
+        <li class="reveal"><div><b>해결 방향 상담 (1~2시간)</b><span>화면을 보며 함께 설계하고 다음 할 일을 정합니다.</span></div></li>
+      </ol>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq">
+        <details><summary>온라인으로 진행되나요?</summary><p>네. 화상 회의로 진행합니다.</p></details>
+        <details><summary>일정을 바꿀 수 있나요?</summary><p>하루 전까지 알려 주시면 변경할 수 있습니다. (예제 정책)</p></details>
+      </div>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2>신청하기</h2>
+      <form class="form" data-form novalidate>
+        <label>이름<input name="name" type="text" placeholder="홍길동" required></label>
+        <label>이메일<input name="email" type="email" placeholder="you@example.com" required></label>
+        <label>상담 유형
+          <select name="kind"><option>방향 점검</option><option>설계 검토</option><option>팀 도입</option></select>
+        </label>
+        <label>희망 시간대<input name="time" type="text" placeholder="예) 평일 저녁"></label>
+        <label>고민 내용<textarea name="note"></textarea></label>
+        <button class="btn btn-primary" type="submit">신청하기</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

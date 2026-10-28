@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>커뮤니티 · 프롬프트 랩</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+</head>
+<body data-root="../..">
+  <div id="site-header"></div>
+  <main>
+    <section class="dark-hero">
+      <div class="container">
+        <p class="eyebrow">COMMUNITY</p>
+        <h1>실무자가 모여<br><em>토론하고 만드는 모임</em></h1>
+        <p class="lead">이번 기수 알림을 신청하고 함께 성장할 동료를 만나보세요. (예제용 가상 프로그램)</p>
+        <a class="btn btn-glow" href="#apply">알림 신청하기 ↗</a>
+      </div>
+    </section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2 class="reveal">도구는 쓰는데, 맞게 쓰고 있는지 모르겠다면</h2>
+      <div class="grid-3">
+        <div class="tile reveal"><h3>대화 상대가 없다</h3><p>비슷한 수준에서 고민을 나눌 사람이 주변에 드뭅니다.</p></div>
+        <div class="tile reveal"><h3>방향이 잡히지 않는다</h3><p>배운 것은 많은데 어디에 쓸지 정리가 안 됩니다.</p></div>
+        <div class="tile reveal"><h3>남의 방식을 모른다</h3><p>다른 직군은 어떻게 일하는지 볼 기회가 적습니다.</p></div>
+      </div>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2 class="reveal">격월로 토론과 개발을 번갈아 합니다</h2>
+      <ul class="timeline">
+        <li class="reveal"><time>짝수 달</time><span>주제 토론 · 각자 쓴 방식을 공유하고 서로 질문합니다.</span></li>
+        <li class="reveal"><time>홀수 달</time><span>함께 만들기 · 작은 팀을 꾸려 하루 동안 결과물을 만듭니다.</span></li>
+        <li class="reveal"><time>분기 말</time><span>발표회 · 만든 것을 소개하고 피드백을 받습니다.</span></li>
+      </ul>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2 class="reveal">선발 절차</h2>
+      <ol class="steps">
+        <li class="reveal"><div><b>신청서 제출</b><span>간단한 소개와 신청 이유를 적어 주세요.</span></div></li>
+        <li class="reveal"><div><b>짧은 대화</b><span>서로 맞는지 가볍게 이야기를 나눕니다.</span></div></li>
+        <li class="reveal"><div><b>합류 안내</b><span>결과와 일정을 메일로 안내드립니다.</span></div></li>
+      </ol>
+    </div></section>
+
+    <section class="block"><div class="container narrow-lg">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq">
+        <details><summary>개발자가 아니어도 되나요?</summary><p>네. 직군과 상관없이 업무에 적용해 보려는 의지가 있으면 됩니다.</p></details>
+        <details><summary>선발되지 않으면 결제는 어떻게 되나요?</summary><p>결제는 선발 이후에만 진행되므로 그 전에는 청구되지 않습니다. (예제 정책)</p></details>
+        <details><summary>왜 신청서를 받나요?</summary><p>서로 대화 수준이 맞아야 모임이 오래가기 때문입니다.</p></details>
+      </div>
+    </div></section>
+
+    <section class="block" id="apply"><div class="container narrow-lg">
+      <h2>알림 신청</h2>
+      <form class="form" data-form novalidate>
+        <label>성함<input name="name" type="text" required></label>
+        <label>이메일<input name="email" type="email" placeholder="you@example.com" required></label>
+        <label>직무·연차 (선택)<input name="role" type="text"></label>
+        <label>신청 이유<textarea name="why"></textarea></label>
+        <button class="btn btn-primary" type="submit">신청하기</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

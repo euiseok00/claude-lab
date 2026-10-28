@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>프롬프트 랩 · 실전 AI 활용 교육</title>
+  <meta name="description" content="레이아웃과 인터랙션 학습용 클론 예제. 모든 문구와 이미지는 자체 제작한 가상의 내용입니다.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>
+    // 첫 페인트 전에 테마를 적용해 깜박임을 막는다.
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+</head>
+<body data-root="." data-banner>
+  <div id="site-header"></div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">PROMPT LAB</p>
+          <h1>도구를 쓰는 법이 아니라<br>일하는 방식을 바꿉니다.</h1>
+          <p class="lead">유행하는 기능 소개 대신, <strong>바로 업무에 적용되는 습관</strong>을 연습합니다. 예제로 만든 가상의 교육 기관 페이지입니다.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="pages/programs/membership.html">샘플 자료 받기 <span aria-hidden="true">↗</span></a>
+            <a class="btn-link" href="pages/company/contact.html">팀 도입 문의 →</a>
+          </div>
+          <p class="fineprint">가입 없이 체험 · 결제 정보 없음</p>
+          <dl class="stats">
+            <div><dt>누적 수강생</dt><dd>1,000+</dd></div>
+            <div><dt>협업 팀</dt><dd>10곳</dd></div>
+            <div><dt>평균 만족도</dt><dd>4.8 / 5</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="terminal" role="img" aria-label="터미널 화면 예시">
+            <div class="terminal-bar"><i></i><i></i><i></i><span>starter-pack · 하루 10회 무료</span></div>
+            <div class="terminal-body">
+              <p class="mono dim"><span class="accent">$</span> assistant</p>
+              <p class="mono"><span class="accent">&gt;_</span> starter-pack</p>
+              <h2>평소 쓰던 AI에<br>나만의 기준을 더하세요</h2>
+              <p class="dim">기획·디자인·개발 판단 기준을 대화에 그대로 얹습니다. 가상의 설명 문구입니다.</p>
+              <p class="mono dim"><span class="dot"></span> 여러 도구 연결 · 하루 10회 무료</p>
+              <p class="mono"><span class="accent">$</span> <span class="cursor"></span></p>
+            </div>
+          </div>
+          <figure class="profile-card">
+            <span class="avatar" aria-hidden="true">김</span>
+            <figcaption><strong>김하늘</strong><span>가상 강사 · 소프트웨어 엔지니어</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="container">
+        <p class="section-label reveal">강의·멤버십</p>
+        <div class="card-grid">
+          <article class="card card-dark reveal">
+            <span class="badge">NEW · VOD</span>
+            <h3>배포 이후가 불안한 개발자를 위한 인프라 기초</h3>
+            <p>로컬에서 되던 서비스를 운영 환경까지 옮기는 과정을 직접 따라 합니다.</p>
+            <div class="card-foot">
+              <span class="price"><s>149,000원</s> <b>109,000원</b></span>
+              <a href="pages/company/contact.html" class="card-cta">예약하기 ↗</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon mono" aria-hidden="true">&gt;_</span>
+            <span class="badge badge-green">스타터 팩</span>
+            <h3>프롬프트 스타터 팩</h3>
+            <p>자주 쓰는 업무 흐름을 템플릿으로 묶었습니다. 예제용 가상 상품입니다.</p>
+            <div class="card-foot">
+              <span class="price"><b>하루 10회 무료</b> · 구독 월 9,900원</span>
+              <a href="pages/company/contact.html" class="card-cta">자세히 보기 ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label reveal">함께한 팀</p>
+        <div class="logo-strip reveal" aria-label="협업 팀 예시">
+          <div class="marquee">
+            <ul>
+              <li>Northwind Co.</li><li>Lumen Works</li><li>Orbit Labs</li><li>Paperplane</li><li>Greenfield</li><li>Bluebird Studio</li><li>Maple &amp; Co.</li><li>Quartz Dev</li>
+            </ul>
+            <ul aria-hidden="true">
+              <li>Northwind Co.</li><li>Lumen Works</li><li>Orbit Labs</li><li>Paperplane</li><li>Greenfield</li><li>Bluebird Studio</li><li>Maple &amp; Co.</li><li>Quartz Dev</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label reveal">먼저 해 본 분들</p>
+        <div class="quote-grid">
+          <blockquote class="quote reveal">“막연했던 작업을 <mark>한 번에 정리</mark>할 수 있었어요.” <cite>수강생 A · 멘토링</cite></blockquote>
+          <blockquote class="quote reveal">“설명이 쉬워서 <mark>바로 따라 해 봤습니다</mark>.” <cite>수강생 B · 멘토링</cite></blockquote>
+          <blockquote class="quote reveal">“질문이 구체적이라 <mark>대화의 수준이 높았어요</mark>.” <cite>수강생 C · 코칭</cite></blockquote>
+          <blockquote class="quote reveal">“고민을 정리하고 <mark>다음 단계가 보였습니다</mark>.” <cite>수강생 D · 코칭</cite></blockquote>
+        </div>
+        <p class="fineprint">※ 위 후기는 예제를 위해 직접 작성한 가상의 문장입니다.</p>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container narrow">
+        <h2 class="reveal">소식 받아보기</h2>
+        <form class="newsletter reveal" id="newsletter" data-form novalidate>
+          <label class="sr-only" for="email">이메일</label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit">구독</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
